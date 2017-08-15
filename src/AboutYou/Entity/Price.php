@@ -10,26 +10,26 @@ class Price
      *
      * @var int
      */
-    public $current;
+    private $current;
 
     /**
      * Old price.
      *
      * @var int|null
      */
-    public $old;
+    private $old;
 
     /**
      * Defines if the price is sale.
      *
      * @var bool
      */
-    public $isSale;
+    private $isSale;
 
     /**
      * Variant that the price belongs to.
      *
      * @var \AboutYou\Entity\Variant
      */
-    public $variant;
+    private $variant;
 }
