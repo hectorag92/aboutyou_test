@@ -1,7 +1,7 @@
 <?php
 
 namespace AboutYou\Entity;
-
+use AboutYou\Entity\{Price, Variant};
 
 class Variant
 {
@@ -10,47 +10,47 @@ class Variant
      *
      * @var int
      */
-    public $id;
+    private $id;
 
     /**
      * Defines if the Variant is default for the product.
      *
      * @var bool
      */
-    public $isDefault;
+    private $isDefault;
 
     /**
      * Defines if the Variant is Available or not.
      * 
      * @var bool
      */
-    public $isAvailable;
+    private $isAvailable;
 
     /**
      * Number of available items in stock.
      *
      * @var int
      */
-    public $quantity;
+    private $quantity;
 
     /**
      * Size of the Variant.
      *
      * @var mixed
      */
-    public $size;
+    private $size;
 
     /**
      * Variant price.
      * 
      * @var \AboutYou\Entity\Price
      */
-    public $price;
+    private $price;
 
     /**
      * Product that the Variant belongs to.
      *
      * @var \AboutYou\Entity\Product
      */
-    public $product;
+    private $product;
 }
