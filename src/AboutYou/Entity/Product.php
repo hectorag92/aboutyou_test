@@ -10,26 +10,26 @@ class Product
      *
      * @var int
      */
-    public $id;
+    private $id;
 
     /**
      * Name of the Product.
      *
      * @var string
      */
-    public $name;
+    private $name;
 
     /**
      * Description of the Product.
      * 
      * @var string
      */
-    public $description;
+    private $description;
 
     /**
      * Unsorted list of Variants with their corresponding prices.
      * 
      * @var \AboutYou\Entity\Variant[]
      */
-    public $variants = [];
+    private $variants = [];
 }
