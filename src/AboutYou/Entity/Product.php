@@ -1,7 +1,6 @@
 <?php
 
 namespace AboutYou\Entity;
-use AboutYou\Entity\Variant;
 
 class Product
 {
