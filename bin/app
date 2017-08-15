@@ -4,3 +4,7 @@
 require __DIR__  . '/../vendor/autoload.php';
 
 // You app initialisation goes here
+use \AboutYou\Service\CategoryService;
+
+$category_service = new CategoryService();
+$category_service->getProducts(17325);
