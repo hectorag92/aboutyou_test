@@ -10,19 +10,19 @@ class Category
      *
      * @var int
      */
-    public $id;
+    private $id;
 
     /**
      * Name of the Category.
      *
      * @var string
      */
-    public $name;
+    private $name;
 
     /**
      * List of Products that belong to a Category.
      *
      * @var \AboutYou\Entity\Product[]
      */
-    public $products = [];
+    private $products = [];
 }
