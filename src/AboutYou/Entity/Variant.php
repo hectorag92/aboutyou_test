@@ -1,7 +1,6 @@
 <?php
 
 namespace AboutYou\Entity;
-use AboutYou\Entity\{Price, Variant};
 
 class Variant
 {
@@ -53,4 +52,73 @@ class Variant
      * @var \AboutYou\Entity\Product
      */
     private $product;
+
+    public function __construct(int $id, bool $isDefault, bool $isAvailable, bool $quantity, $size, Product $product){
+        $this->id = $id;
+        $this->isDefault = $isDefault;
+        $this->isAvailable = $isAvailable;
+        $this->quantity = $quantity;
+        $this->size = $size;
+        $this->product = $product;
+    }
+
+    public function getId(){
+        return $this->id;
+    }
+
+    public function getIsDefault(){
+        return $this->isDefault();
+    }
+
+    public function setIsDefault(bool $isDefault) { 
+        $this->isDefault = $isDefault;
+    }
+
+    public function getIsAvailable(){
+        return $this->isAvailable();
+    }
+
+    public function setIsAvailable(bool $isAvailable){
+        $this->isAvailable = $isAvailable;
+    }
+
+    /*
+    *
+    * Quantity would have additional functions such as add or sub. Not included
+    * as it is not required.
+    * Same for additional checks (for example, disabling availability when
+    * quantity reaches zero), which is included in the second goal task
+    *
+    */
+    public function getQuantity(){
+        return $this->quantity;
+    }
+
+    public function setQuantity(int $quantity){
+        $this->quantity = $quantity;
+    }
+
+    public function getSize(){
+        return $this->size;
+    }
+
+    public function setSize(mixed $size){
+        $this->size = $size;
+    }
+
+    public function getPrice(){
+        return $this->price;
+    }
+
+    public function setPrice(Price $price){
+        $this->price = $price;
+    }
+
+    public function getProduct(){
+        return $this->product;
+    }
+
+    public function setProduct(Product $product){
+        $this->price = $price;
+    }
 }
