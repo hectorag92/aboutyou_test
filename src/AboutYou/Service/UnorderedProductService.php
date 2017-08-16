@@ -7,10 +7,6 @@ namespace AboutYou\Service;
  */
 class UnorderedProductService implements ProductServiceInterface
 {
-    /**
-     * @var ProductServiceInterface
-     */
-    private $productService;
 
     /**
      * Maps from category name to the id for the category service.
@@ -22,11 +18,11 @@ class UnorderedProductService implements ProductServiceInterface
     ];
 
     /**
-     * @param ProductServiceInterface $productService
+     * @param CategoryServiceInterface $CategoryService
      */
-    public function __construct(ProductServiceInterface $productService)
+    public function __construct(CategoryServiceInterface $categoryService)
     {
-       $this->productService = $productService;
+       $this->categoryService = $categoryService;
     }
 
     /**
@@ -40,6 +36,7 @@ class UnorderedProductService implements ProductServiceInterface
         }
 
         $categoryId = $this->categoryNameToIdMapping[$categoryName];
-        $productResults = $this->productService->getProductsForCategory($categoryId);
+        $productResults = $this->categoryService->getProducts($categoryId);
+        return $productResults;
     }
 }
